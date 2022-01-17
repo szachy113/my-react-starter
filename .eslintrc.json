@@ -24,7 +24,10 @@
     "import/extensions": "off",
     "import/no-unresolved": "off",
     "import/prefer-default-export": "warn",
-    "no-param-reassign": "off",
+    "no-param-reassign": [
+      "error",
+      { "props": true, "ignorePropertyModificationsFor": ["state"] }
+    ],
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "warn"
   }
