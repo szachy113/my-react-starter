@@ -1,4 +1,5 @@
-import Counter from './features/counter/Counter';
+import Counter from '../features/counter/Counter';
+import '../styles/reset.css';
 
 export default function App() {
   return (
