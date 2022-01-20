@@ -23,7 +23,7 @@
     "react/jsx-one-expression-per-line": "off",
     "import/extensions": "off",
     "import/no-unresolved": "off",
-    "import/prefer-default-export": "warn",
+    "import/prefer-default-export": "off",
     "no-param-reassign": [
       "error",
       { "props": true, "ignorePropertyModificationsFor": ["state"] }
