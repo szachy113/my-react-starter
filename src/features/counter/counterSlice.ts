@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState, AppThunk } from '@app/store';
 import fetchCount from './mockCounterAPI';
 
-export interface CounterState {
+interface CounterState {
   value: number;
   status: 'idle' | 'loading' | 'failed';
 }
@@ -15,9 +15,9 @@ const initialState: CounterState = {
 export const incrementAsync = createAsyncThunk(
   'counter/fetchCount',
   async (amount: number) => {
-    const response = await fetchCount(amount);
+    const { data } = await fetchCount(amount);
 
-    return response.data;
+    return data;
   },
 );
 
@@ -25,37 +25,39 @@ export const counterSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {
-    increment: (state) => {
+    increment(state) {
       state.value += 1;
     },
-    decrement: (state) => {
+    decrement(state) {
       state.value -= 1;
     },
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload;
+    incrementByAmount(state, { payload }: PayloadAction<number>) {
+      state.value += payload;
     },
   },
-  extraReducers: (builder) => {
+  extraReducers(builder) {
     builder
       .addCase(incrementAsync.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(incrementAsync.fulfilled, (state, action) => {
+      .addCase(incrementAsync.fulfilled, (state, { payload }) => {
         state.status = 'idle';
-        state.value += action.payload;
+        state.value += payload;
       });
   },
 });
 
 export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
-export const selectCount = (state: RootState) => state.counter.value;
+export const selectCounter = ({ counter: { value } }: RootState) => value;
 
 export const incrementIfOdd =
   (amount: number): AppThunk =>
   (dispatch, getState) => {
-    const currentValue = selectCount(getState());
-    if (currentValue % 2 === 1) {
+    const currentValue = selectCounter(getState());
+    const isOdd = currentValue % 2;
+
+    if (isOdd) {
       dispatch(incrementByAmount(amount));
     }
   };

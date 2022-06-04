@@ -2,7 +2,7 @@
 
 Vite + React + TypeScript + Redux Toolkit + ESLint (Airbnb Style Guide) + Prettier project starter.
 
-No particular form of styling was chosen.
+No particular form of styling had been chosen.
 
 ## Code Structure
 
@@ -12,13 +12,8 @@ No particular form of styling was chosen.
 
   - `main.tsx`
   - `/app`: global app setup and configuration used by the entire app
-    - `store.ts`
-    - `App.tsx`
-  - `/assets`
-  - `/common`: contains truly generic, reusable utilities and components
-  - `/components`: all the other components with their styles, split into separate folders
-  - `/features`: feature-specific components, slices, APIs and styles
-    - `/counter`
-      - `counterSlice.ts`
-      - `Counter.tsx`
-  - `/styles`: global styles, theme configurations
+  - `/assets`: static files (like images or icons)
+  - `/common`: truly generic, reusable utilities (like hooks or helper functions) and components
+  - `/components`: all the rest of the components with their styles
+  - `/features`: feature-specific components with their styles, slices and APIs
+  - `/styles`: _global_ styles and theme configurations
