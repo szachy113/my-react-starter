@@ -15,7 +15,7 @@ No particular form of styling was chosen.
     - `store.ts`
     - `App.tsx`
   - `/assets`
-  - `/common`: contains truly generic and reusable utilities and components
+  - `/common`: contains truly generic, reusable utilities and components
   - `/components`: all the other components with their styles, split into separate folders
   - `/features`: feature-specific components, slices, APIs and styles
     - `/counter`

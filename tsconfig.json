@@ -21,6 +21,7 @@
       "@app/*": ["app/*"],
       "@assets/*": ["assets/*"],
       "@common/*": ["common/*"],
+      "@hooks/*": ["common/hooks/*"],
       "@components/*": ["components/*"],
       "@features/*": ["features/*"],
       "@styles/*": ["styles/*"]
