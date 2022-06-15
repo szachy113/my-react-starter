@@ -32,6 +32,7 @@
     "@typescript-eslint/no-unused-vars": "warn",
     "react/prop-types": "off",
     "no-undef": "off",
-    "import/no-extraneous-dependencies": ["off", { "devDependencies": false }]
+    "import/no-extraneous-dependencies": ["off", { "devDependencies": false }],
+    "no-restricted-exports": "off" // export barrels, see https://github.com/eslint/eslint/issues/15617
   }
 }
