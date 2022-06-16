@@ -49,11 +49,11 @@ export const counterSlice = createSlice({
 
 export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
-export const selectCounter = ({ counter: { value } }: RootState) => value;
+export const selectCounter = ({ counter }: RootState) => counter.value;
 
 export const incrementIfOdd =
   (amount: number): AppThunk =>
-  (dispatch, getState) => {
+  (dispatch, getState): void => {
     const currentValue = selectCounter(getState());
     const isOdd = currentValue % 2;
 
