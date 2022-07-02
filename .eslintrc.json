@@ -48,6 +48,8 @@
         "devDependencies": false
       }
     ],
-    "no-restricted-exports": "off" // export barrels, see https://github.com/eslint/eslint/issues/15617
+    "no-restricted-exports": "off", // export barrels, see https://github.com/eslint/eslint/issues/15617,
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"]
   }
 }
