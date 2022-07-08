@@ -17,6 +17,10 @@ Recommended by [Redux Toolkit docs](https://redux.js.org/faq/code-structure/#wha
   - `/features`: feature-specific components with their styles, slices and APIs
   - `/styles`: _global_ styles and theme configurations
 
+## Vim / Neovim Plugins.
+
+There are many ways to integrate both ESLint and Prettier with your Vim-based terminal editor. Please see for example [Asynchronous Lint Engine](https://github.com/dense-analysis/ale#asynchronous-lint-engine---), [Conquer of Completion](https://github.com/neoclide/coc.nvim#why) or the [built-in plugins for LunarVim](https://www.lunarvim.org/plugins/01-core-plugins-list.html#core-plugins-list) (my personal all time favorite editor ❤️‍🔥).
+
 ## VSCode Extension
 
-If you want to see the ESLint errors inside your favorite VSCode editor, please install the official [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+If you want to see the ESLint errors inside your VSCode editor, please install the official [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
