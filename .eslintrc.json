@@ -17,14 +17,23 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier"
+  ],
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [
       "warn",
       {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     ],
     "react/jsx-one-expression-per-line": "off",
@@ -35,7 +44,9 @@
       "error",
       {
         "props": true,
-        "ignorePropertyModificationsFor": ["state"]
+        "ignorePropertyModificationsFor": [
+          "state"
+        ]
       }
     ],
     "no-unused-vars": "off",
@@ -50,6 +61,9 @@
     ],
     "no-restricted-exports": "off", // export barrels, see https://github.com/eslint/eslint/issues/15617,
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": ["error"]
+    "@typescript-eslint/no-shadow": [
+      "error"
+    ],
+    "prettier/prettier": "error"
   }
 }
